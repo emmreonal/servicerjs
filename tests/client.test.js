@@ -4,8 +4,8 @@ const TestService = new Service(2000, "localhost");
 
 TestService.callAction(
   "createUser",
-  { firstName: "Emre", lastName: "Önal" },
+  { firstName: "Elon", lastName: "Musk" },
   function (responseData) {
-    console.log("x", responseData);
+    console.log(responseData);
   }
 );

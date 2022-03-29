@@ -3,8 +3,6 @@ import Service from "../src/index.js";
 const TestService = new Service(2000, "localhost");
 
 TestService.addAction("createUser", async (data) => {
-  await sleep(3000);
-
   return {
     status: "success",
     firstName: data.firstName,
@@ -16,9 +14,3 @@ TestService.addAction("createUser", async (data) => {
 TestService.start((port, host) => {
   console.log(`Server is running on http://${host}:${port}`);
 });
-
-function sleep(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
